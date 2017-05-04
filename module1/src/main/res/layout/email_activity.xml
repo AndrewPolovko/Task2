@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="?android:dividerHorizontal"
+            android:orientation="vertical"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="top"
+                    android:gravity="center_vertical"
+                    android:text="@string/to"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/edit_text_recipient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:inputType="textEmailAddress" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edit_text_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:hint="@string/subject"
+                android:inputType="textEmailSubject"
+                android:minHeight="56dp" />
+
+            <EditText
+                android:id="@+id/edit_text_letter_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:minHeight="56dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_send"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_send_white_24dp" />
+
+</FrameLayout>
